@@ -24,6 +24,7 @@ public class ViewHolderScreen extends RecyclerView.ViewHolder {
     public void onBind(Task task) {
          title.setText(task.title);
          isDone.setChecked(task.isDone);
+         dates.setText(task.dates());
 
     }
 }
