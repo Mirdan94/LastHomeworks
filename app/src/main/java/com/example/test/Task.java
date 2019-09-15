@@ -12,6 +12,14 @@ public class Task {
     public Date endDate;
     public boolean isDone;
 
+    public Task(String title, String description, Date startDate, Date endDate, boolean isDone) {
+        this.title = title;
+        this.description = description;
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.isDone = isDone;
+    }
+
     public String dates () {
 
         DateFormat format = new SimpleDateFormat();

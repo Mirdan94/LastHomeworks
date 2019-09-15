@@ -8,10 +8,33 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 public class TaskAdapter extends RecyclerView.Adapter<ViewHolderScreen> {
 
     ArrayList<Task> tasks;
+
+    public TaskAdapter() {
+        tasks = new ArrayList<>();
+
+        tasks.add(new Task("new title",
+                "new Descrition",
+                new Date(),
+                new Date(),
+                false));
+
+        tasks.add(new Task("new title 2",
+                "new Descrition 2",
+                new Date(),
+                new Date(),
+                false));
+
+        tasks.add(new Task("new title 3",
+                "new Descrition 3",
+                new Date(),
+                new Date(),
+                false));
+    }
 
     @NonNull
     @Override
