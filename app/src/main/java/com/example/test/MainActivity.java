@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
@@ -20,5 +21,12 @@ public class MainActivity extends AppCompatActivity {
 
         RecyclerView.LayoutManager manager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(manager);
+    }
+
+    private void detailsActivity (Task task) {
+
+        Intent intent = new Intent(MainActivity.this, DetailsActivity.class);
+        intent.putExtra(DetailsActivity.DETAILS_KEY, task);
+        startActivity(intent);
     }
 }
