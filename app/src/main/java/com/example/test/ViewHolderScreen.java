@@ -9,9 +9,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class ViewHolderScreen extends RecyclerView.ViewHolder {
 
-    TextView title;
+    TextView title, dates;
     CheckBox isDone;
-    TextView dates;
 
     public ViewHolderScreen (@NonNull View itemView) {
         super(itemView);
