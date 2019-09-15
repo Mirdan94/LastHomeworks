@@ -1,10 +1,11 @@
 package com.example.test;
 
+import java.io.Serializable;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class Task {
+public class Task implements Serializable {
 
     public String title;
     public String description;
@@ -21,13 +22,25 @@ public class Task {
     }
 
     public String dates () {
-
-        DateFormat format = new SimpleDateFormat();
-
-        String startDateStr = format.format(startDate);
-        String endDateStr = format.format(endDate);
+        String startDateStr = dateToString(startDate);
+        String endDateStr = dateToString(endDate);
 
         return startDateStr + " - " + endDateStr;
     }
 
+    public String startDatestr () {
+        return dateToString(startDate);
+    }
+
+    public String endDatestr () {
+        return dateToString(endDate);
+    }
+
+    private String dateToString (Date date) {
+        DateFormat format = new SimpleDateFormat();
+        String string = format.format(date);
+
+        return string;
+
+    }
 }
