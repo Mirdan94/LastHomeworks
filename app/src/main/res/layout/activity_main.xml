@@ -13,4 +13,14 @@
 
     </androidx.recyclerview.widget.RecyclerView>
 
+    <Button
+        android:id="@+id/create_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:hint="Create"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

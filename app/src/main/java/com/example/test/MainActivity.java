@@ -21,9 +21,12 @@ public class MainActivity extends AppCompatActivity {
 
         RecyclerView.LayoutManager manager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(manager);
+
+
+
     }
 
-    private void detailsActivity (Task task) {
+    private void openDetails (Task task) {
 
         Intent intent = new Intent(MainActivity.this, DetailsActivity.class);
         intent.putExtra(DetailsActivity.DETAILS_KEY, task);
