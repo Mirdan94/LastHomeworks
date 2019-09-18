@@ -3,6 +3,7 @@ package com.example.test;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,17 +15,19 @@ import java.util.Calendar;
 public class FillDetailsActivity extends AppCompatActivity {
 
     TextView tv_startDate;
-    Button bt_start;
+    Button bt_start, create;
     Calendar c;
     DatePickerDialog dpd;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fill_details);
 
-        tv_startDate = (TextView) findViewById(R.id.tv_start);
-        bt_start = (Button) findViewById(R.id.bn_startDate);
+        tv_startDate = findViewById(R.id.tv_start);
+        bt_start = findViewById(R.id.bn_startDate);
+        create = findViewById(R.id.create_button2);
 
         bt_start.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,6 +46,14 @@ public class FillDetailsActivity extends AppCompatActivity {
                     }
                 }, day, month, year);
                 dpd.show();
+            }
+        });
+
+        create.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
             }
         });
     }

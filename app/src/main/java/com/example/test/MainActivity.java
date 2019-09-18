@@ -16,6 +16,8 @@ import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
 
+    Button create_button;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +32,14 @@ public class MainActivity extends AppCompatActivity {
         RecyclerView.LayoutManager manager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(manager);
 
-
+        create_button = findViewById(R.id.create_button);
+        create_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, FillDetailsActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 
@@ -40,4 +49,7 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra(DetailsActivity.DETAILS_KEY, task);
         startActivity(intent);
     }
+
+
+
 }

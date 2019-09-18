@@ -34,7 +34,7 @@ public class DetailsActivity extends AppCompatActivity {
 
     private Task getTask() {
         Intent intent = getIntent();
-        Task task = (Task ) intent.getSerializableExtra(DETAILS_KEY);
+        Task task = (Task) intent.getSerializableExtra(DETAILS_KEY);
         return task;
     }
 
