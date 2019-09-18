@@ -1,5 +1,6 @@
 package com.example.test;
 
+import android.content.Intent;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.TextView;

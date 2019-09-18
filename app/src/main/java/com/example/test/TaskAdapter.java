@@ -1,5 +1,6 @@
 package com.example.test;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,7 +15,9 @@ public class TaskAdapter extends RecyclerView.Adapter<ViewHolderScreen> {
 
     ArrayList<Task> tasks;
 
+
     public TaskAdapter() {
+
         tasks = new ArrayList<>();
 
         tasks.add(new Task("new title",

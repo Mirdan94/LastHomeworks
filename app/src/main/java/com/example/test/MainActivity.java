@@ -36,20 +36,9 @@ public class MainActivity extends AppCompatActivity {
         create_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, FillDetailsActivity.class);
-                startActivity(intent);
+                Intent intent = new Intent(MainActivity.this, TaskAdapter.class);
+                startActivityForResult(intent, 1);
             }
         });
-
     }
-
-    private void openDetails(Task task) {
-
-        Intent intent = new Intent(MainActivity.this, DetailsActivity.class);
-        intent.putExtra(DetailsActivity.DETAILS_KEY, task);
-        startActivity(intent);
-    }
-
-
-
 }
